@@ -1,0 +1,26 @@
+REST stands for Representational State Transfer 
+ie. a set of guidlines/principles for how clients and servers should communicate with each other.
+
+It is the idea of treating data on the server side as resources that can be CRUD'd; for example a resource could be comments.
+
+The most common way of approaching REST is in formatting URLs and HTTP verns in your apps.
+
+Example CRUD functionality blueprint: 
+
+GET /comments - list all comments
+POST /comments - Create a new comments
+GET /comments/:id - Gets one comment (using id)
+PATCH /comments/:id - Updates one comment
+DELETE /comments/:id - Destroys one comment
+
+
+An example using Comments as a resource: 
+
+Name    Path                Verb    Purpose
+Index   /comments           GET     Displays all comments
+New     /comments/new       GET     Form to create a new comment
+Create  /comments           POST    Creates new comment on server
+Show    /comments/:id       GET     Details for one specific comment
+Edit    /comments/:id/edit  GET     Form to edit specific comment
+Update  /comments/:id       PATCH   Updates specific comment on server
+Destroy /comments/:id       DELETE  Deletes specific comment on server
